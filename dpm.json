@@ -1,0 +1,17 @@
+{
+  "$schema": "https://dpmland.deno.dev/schema",
+  "name": "monk",
+  "version": "0.1.0-alpha",
+  "description": "Do you want generate a installer for your app use this!!",
+  "author": "DPM LAND Authors",
+  "license": "MIT",
+  "main": "mod.ts",
+  "scripts": {
+    "test": "deno test -A --unstable",
+    "fmt": "deno fmt -c deno.json",
+    "lint": "deno lint -c deno.json",
+    "fmt:check": "deno fmt -c deno.json --check && deno lint -c deno.json",
+    "check": "deno fmt -c deno.json --check"
+  },
+  "dependencies": {}
+}

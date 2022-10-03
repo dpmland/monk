@@ -1,0 +1,20 @@
+{
+  "$schema": "https://x.nest.land/eggs@0.3.10/src/schema.json",
+  "name": "monk",
+  "entry": "mod.ts",
+  "description": "Do you want generate a installer for your app use this!!",
+  "homepage": "https://github.com/the_name/monk",
+  "unstable": true,
+  "unlisted": false,
+  "releaseType": "patch",
+  "files": [
+    "./mod.ts",
+    "./src/**/*",
+    "./README.md"
+  ],
+  "ignore": [
+    ".git"
+  ],
+  "checkFormat": "deno task fmt:check",
+  "checkInstallation": true
+}
