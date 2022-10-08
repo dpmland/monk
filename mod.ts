@@ -1,6 +1,7 @@
 // Copyright © 2022 Dpm Land. All Rights Reserved.
 
 import { CompileApp } from './src/compiler.ts';
+import { MoveTheBinary } from './src/copy.ts';
 
 await CompileApp({
   typeInstall: 'canary',
@@ -19,5 +20,14 @@ await CompileApp({
       mainFile: './src/cli.ts',
       fileOut: 'spider',
     },
+  },
+});
+
+await MoveTheBinary({
+  version: 'canary',
+  appName: 'spider',
+  files: {
+    mainFile: './src/cli.ts',
+    compiledFilename: 'spider',
   },
 });

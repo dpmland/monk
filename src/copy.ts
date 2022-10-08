@@ -17,12 +17,12 @@ export interface BinaryCopyOptions {
 
 export async function MoveTheBinary(options: BinaryCopyOptions) {
   // Valid the extensions!
-  if (
+  /* if (
     !options.files.mainFile.endsWith('.ts') ||
     !options.files.mainFile.endsWith('.js')
   ) {
     throw new Error('Is necessary a file with an extension like .ts or .js!');
-  }
+  } */
   if (options.files.compiledFilename.split('.').length != 1) {
     throw new Error('Only the filename! not extensions!!');
   }
@@ -88,7 +88,7 @@ export async function MoveTheBinary(options: BinaryCopyOptions) {
           } file from the current path!\n`,
         ),
       );
-      await Deno.remove(`${join(Deno.cwd(), 'dpm')}`);
+      await Deno.remove(`${join(Deno.cwd(), options.files.compiledFilename)}`);
     } else {
       console.log(
         colors.red(
