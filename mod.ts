@@ -27,7 +27,6 @@ await MoveTheBinary({
   version: 'canary',
   appName: 'spider',
   files: {
-    mainFile: './src/cli.ts',
     compiledFilename: 'spider',
   },
 });

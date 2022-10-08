@@ -10,19 +10,11 @@ export interface BinaryCopyOptions {
   version: 'stable' | 'canary';
   appName: string;
   files: {
-    mainFile: string;
     compiledFilename: string;
   };
 }
 
 export async function MoveTheBinary(options: BinaryCopyOptions) {
-  // Valid the extensions!
-  /* if (
-    !options.files.mainFile.endsWith('.ts') ||
-    !options.files.mainFile.endsWith('.js')
-  ) {
-    throw new Error('Is necessary a file with an extension like .ts or .js!');
-  } */
   if (options.files.compiledFilename.split('.').length != 1) {
     throw new Error('Only the filename! not extensions!!');
   }
