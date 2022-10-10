@@ -1,5 +1,4 @@
 // Copyright © 2022 Dpm Land. All Rights Reserved.
-
 import * as colors from 'https://deno.land/std@0.158.0/fmt/colors.ts';
 import { join } from 'https://deno.land/std@0.158.0/path/mod.ts';
 import { BIN } from '../src/utils.ts';
@@ -33,7 +32,9 @@ export async function MoveTheBinary(options: BinaryCopyOptions) {
           } executable!\n`,
         ),
       );
-      console.log(colors.cyan('Copying the executable to the BIN path!\n'));
+      console.log(
+        colors.brightGreen('Copying the executable to the BIN path!\n'),
+      );
       await copy(
         `${join(Deno.cwd(), `${options.files.compiledFilename}.exe`)}`,
         `${join(BIN, `${options.files.compiledFilename}.exe`)}`,
@@ -61,7 +62,7 @@ export async function MoveTheBinary(options: BinaryCopyOptions) {
   ) {
     if (dracoFiles.exists(join(Deno.cwd(), options.files.compiledFilename))) {
       console.log(
-        colors.cyan(
+        colors.brightMagenta(
           `Found the ${
             colors.bold(options.files.compiledFilename.toUpperCase())
           } executable!\n`,
@@ -74,7 +75,7 @@ export async function MoveTheBinary(options: BinaryCopyOptions) {
         { overwrite: true },
       );
       console.log(
-        colors.cyan(
+        colors.brightGreen(
           `Removing the ${
             colors.bold(options.files.compiledFilename.toUpperCase())
           } file from the current path!\n`,
