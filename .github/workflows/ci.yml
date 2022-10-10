@@ -1,0 +1,21 @@
+name: CI
+on:
+  push:
+  pull_request:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+
+      - name: Version output
+        run: deno --version
+
+      - name: Check the lint and the formatting tools
+        run: deno task check
+        env:
+          NO_COLOR: true
