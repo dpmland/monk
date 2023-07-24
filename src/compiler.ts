@@ -1,8 +1,8 @@
 // Copyright © 2022 Dpm Land. All Rights Reserved.
 
-import * as colors from 'https://deno.land/std@0.158.0/fmt/colors.ts';
+import * as colors from 'https://deno.land/std@0.195.0/fmt/colors.ts';
 import { dracoFiles } from 'https://deno.land/x/draco@0.1.3/mod.ts';
-import { join } from 'https://deno.land/std@0.158.0/path/mod.ts';
+import { join } from 'https://deno.land/std@0.195.0/path/mod.ts';
 import { Run, TEMP } from '../src/utils.ts';
 
 export interface CompilerOptions {

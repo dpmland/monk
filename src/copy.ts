@@ -1,9 +1,9 @@
 // Copyright © 2022 Dpm Land. All Rights Reserved.
-import * as colors from 'https://deno.land/std@0.158.0/fmt/colors.ts';
-import { join } from 'https://deno.land/std@0.158.0/path/mod.ts';
+import * as colors from 'https://deno.land/std@0.195.0/fmt/colors.ts';
+import { join } from 'https://deno.land/std@0.195.0/path/mod.ts';
 import { BIN } from '../src/utils.ts';
 import { dracoFiles, dracoInfo } from 'https://deno.land/x/draco@0.1.3/mod.ts';
-import { copy } from 'https://deno.land/std@0.158.0/fs/copy.ts';
+import { copy } from 'https://deno.land/std@0.195.0/fs/copy.ts';
 
 export interface BinaryCopyOptions {
   version: 'stable' | 'canary';

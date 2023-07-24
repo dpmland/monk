@@ -5,8 +5,8 @@ import { MoveTheBinary } from './src/copy.ts';
 import figlet from 'https://x.nest.land/deno-figlet@0.0.5/mod.js';
 import * as colors from 'https://deno.land/std@0.158.0/fmt/colors.ts';
 /*
-* Add the Types for the Params in the Function!
-**/
+ * Add the Types for the Params in the Function!
+ */
 
 interface MonkTypes {
   versions: {
